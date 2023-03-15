@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Space Jelly Gear</title>
+        <title>Manga Store</title>
         <meta name="description" content="Get your Space Jelly gear!" />
       </Head>
 
