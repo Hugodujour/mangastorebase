@@ -13,7 +13,8 @@ Ce projet a plusieurs objectifs :
 Mettre en pratique nos connaissances en ligne un site e-commerce complexe et professionnel
 Suivre une méthodologie de projet permettant de travailler en groupe
 Produire rapidement une version fonctionnelle de notre site
-Technologies utilisées
+
+## Technologies utilisées
 Ce projet a été réalisé avec Next.js, un framework web basé sur React. D'autres technologies utilisées comprennent :
 
 -Next
