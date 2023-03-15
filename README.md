@@ -4,6 +4,16 @@ Ceci est un projet de site e-commerce réalisé dans le cadre du projet final de
 ## Description
 MangaStore propose la vente de mangas pour les passionnés qui cherchent des produits rares et une communauté de connaisseurs qui ne tolère pas les arnaques. Notre objectif est de fournir une plateforme où chacun peut gérer sa collection, vendre ses doublons et acheter ce qui est mis en ligne.
 
+## Installation
+Pour lancer le projet, suivez ces étapes:
+
+Clonez le repo  
+Installez les dépendances avec npm install  
+Lancez le développement avec npm run dev  
+
+## Utilisation
+Une fois que le serveur est lancé, vous pouvez accéder au site web à http://localhost:3000. Parcourez notre sélection et ajoutez des mangas dans votre panier, puis enregistez-vous pour finaliser votre paiement.
+
 ## Segment de clientèle
 Notre cible est la niche des passionnés de mangas qui dépensent sans compter pour leur passion.
 
