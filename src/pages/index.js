@@ -24,15 +24,15 @@ export default function Home() {
           <Link href="#">
             <a>
               <div className={styles.heroContent}>
-                <h2>Prepare for liftoff.</h2>
-                <p>Apparel that&apos;s out of this world!</p>
+                <h2>À tous les fans de mangas.</h2>
+                <p>Nous vous proposons le meilleur choix !</p>
               </div>
               <img className={styles.heroImage} src="/images/space-jelly-gear-banner.jpg" alt="" />
             </a>
           </Link>
         </div>
 
-        <h2 className={styles.heading}>Featured Gear</h2>
+        <h2 className={styles.heading}>Derniers articles</h2>
 
         <ul className={styles.products}>
           {products.slice(0, 4).map(product => {
@@ -53,7 +53,7 @@ export default function Home() {
                 </Link>
                 <p>
                   <Button>
-                    Add to Cart
+                    Ajouter au panier
                   </Button>
                 </p>
               </li>

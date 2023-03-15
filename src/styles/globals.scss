@@ -4,6 +4,7 @@
 
 html,
 body {
+  border: solid 2px black;
   padding: 0;
   margin: 0;
   font-family: $font-family;
@@ -20,6 +21,7 @@ a {
 }
 
 img {
+  border: solid 2px black;
   max-width: 100%;
   height: auto;
 }
