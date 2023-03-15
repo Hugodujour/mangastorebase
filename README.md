@@ -16,11 +16,11 @@ Produire rapidement une version fonctionnelle de notre site
 Technologies utilisées
 Ce projet a été réalisé avec Next.js, un framework web basé sur React. D'autres technologies utilisées comprennent :
 
-Next
-React
-SCSS
-Snipcart
-GraphQL
+-Next
+-React
+-SCSS
+-Snipcart
+-GraphQL
 
 Nous accueillons les contributions de la communauté ! Si vous avez des suggestions ou souhaitez signaler un bug, veuillez ouvrir une issue sur notre dépôt GitHub.
 
