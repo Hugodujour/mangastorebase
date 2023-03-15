@@ -1,13 +1,13 @@
-#MangaStore
+# MangaStore
 Ceci est un projet de site e-commerce réalisé dans le cadre du projet final de THP en utilisant la méthodologie Agile, avec le principe des user stories, pour produire rapidement une version fonctionnelle de notre site.
 
-##Description
+## Description
 MangaStore propose la vente de mangas pour les passionnés qui cherchent des produits rares et une communauté de connaisseurs qui ne tolère pas les arnaques. Notre objectif est de fournir une plateforme où chacun peut gérer sa collection, vendre ses doublons et acheter ce qui est mis en ligne.
 
-##Segment de clientèle
+## Segment de clientèle
 Notre cible est la niche des passionnés de mangas qui dépensent sans compter pour leur passion.
 
-##Objectifs du projet
+## Objectifs du projet
 Ce projet a plusieurs objectifs :
 
 Mettre en pratique nos connaissances en ligne un site e-commerce complexe et professionnel
@@ -24,8 +24,8 @@ GraphQL
 
 Nous accueillons les contributions de la communauté ! Si vous avez des suggestions ou souhaitez signaler un bug, veuillez ouvrir une issue sur notre dépôt GitHub.
 
-Crédits
+## Crédits
 Tous les produits présentés sur ce site sont la propriété de leurs propriétaires respectifs. Ce site n'a qu'un but de démonstration.
 
-Licence
+## Licence
 Ce projet est sous licence MIT. Consultez le fichier LICENSE pour plus d'informations.
