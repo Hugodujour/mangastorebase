@@ -1,5 +1,7 @@
 # MangaStore
-Ceci est un projet de site e-commerce réalisé dans le cadre du projet final de THP en utilisant la méthodologie Agile, avec le principe des user stories, pour produire rapidement une version fonctionnelle de notre site.
+Ceci est un projet de site e-commerce réalisé dans le cadre du projet final de THP en utilisant la méthodologie Agile, avec le principe des user stories, pour produire rapidement une version fonctionnelle de notre site.  
+
+Rejoignez le site ici: https://mangastorebase2.fly.dev/
 
 ## Description
 MangaStore propose la vente de mangas pour les passionnés qui cherchent des produits rares et une communauté de connaisseurs qui ne tolère pas les arnaques. Notre objectif est de fournir une plateforme où chacun peut gérer sa collection, vendre ses doublons et acheter ce qui est mis en ligne.
