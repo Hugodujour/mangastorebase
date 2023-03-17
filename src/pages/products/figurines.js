@@ -28,7 +28,7 @@ export default function Figurines() {
                 <Link href="#">
                   <a>
                     <div className={styles.productImage}>
-                      <Image width="500" height="500" src={product.image} alt="" />
+                      <Image width="500" height="500" src="/images/luffy.jpg" alt="" />
                     </div>
                     <h3 className={styles.productTitle}>
                       { product.name }

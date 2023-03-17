@@ -28,7 +28,7 @@ export default function Home() {
                 <h2>À tous les fans de mangas.</h2>
                 <p>Nous vous proposons le meilleur choix !</p>
               </div>
-              <Image className={styles.heroImage} src="/images/space-jelly-gear-banner.jpg" alt="" />
+              <Image className={styles.heroImage} src="/images/space-jelly-gear-banner.jpg" alt="" width={1200} height={400} />
             </a>
           </Link>
         </div>
@@ -39,10 +39,10 @@ export default function Home() {
           {products.slice(0, 4).map(product => {
             return (
               <li key={product.id}>
-                <Link href="#">
+                <Link href="/products/product">
                   <a>
                     <div className={styles.productImage}>
-                      <Image width="500" height="500" src={product.image} alt="" />
+                      <Image width="500" height="500" src="/images/luffy.jpg" alt="" />
                     </div>
                     <h3 className={styles.productTitle}>
                       { product.name }
