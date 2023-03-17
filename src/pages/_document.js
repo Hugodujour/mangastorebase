@@ -12,7 +12,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <script src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"></script>
+        
         <div hidden id="snipcart" data-api-key="YjkwMDI4MzUtNDE3ZS00MTRkLThhYjYtNmNiNTM4ODIzNmNlNjM4MTQzMDkwMzE2MTUyNzQ5"></div>
       </body>
     </Html>

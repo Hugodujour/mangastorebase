@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link';
+import Image from 'next/image';
 
 import Layout from '@components/Layout';
 import Container from '@components/Container';
@@ -27,7 +28,7 @@ export default function Figurines() {
                 <Link href="#">
                   <a>
                     <div className={styles.productImage}>
-                      <img width="500" height="500" src={product.image} alt="" />
+                      <Image width="500" height="500" src={product.image} alt="" />
                     </div>
                     <h3 className={styles.productTitle}>
                       { product.name }

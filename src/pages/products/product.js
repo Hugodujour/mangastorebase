@@ -30,7 +30,7 @@ export default function Product() {
             </p>
             <p className={styles.productBuy}>
               <Button>
-                Add to Cart
+                Ajouter au panier
               </Button>
             </p>
           </div>

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Layout from '@components/Layout';
 import Container from '@components/Container';
 import Button from '@components/Button';
+import Image from 'next/image';
 
 import products from '@data/products';
 
@@ -27,7 +28,7 @@ export default function Home() {
                 <h2>À tous les fans de mangas.</h2>
                 <p>Nous vous proposons le meilleur choix !</p>
               </div>
-              <img className={styles.heroImage} src="/images/space-jelly-gear-banner.jpg" alt="" />
+              <Image className={styles.heroImage} src="/images/space-jelly-gear-banner.jpg" alt="" />
             </a>
           </Link>
         </div>
@@ -41,7 +42,7 @@ export default function Home() {
                 <Link href="#">
                   <a>
                     <div className={styles.productImage}>
-                      <img width="500" height="500" src={product.image} alt="" />
+                      <Image width="500" height="500" src={product.image} alt="" />
                     </div>
                     <h3 className={styles.productTitle}>
                       { product.name }
