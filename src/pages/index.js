@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link';
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
 import Layout from '@components/Layout';
 import Container from '@components/Container';
@@ -64,4 +65,51 @@ export default function Home() {
       </Container>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const client = new ApolloClient({
+    uri: 'https://api-eu-west-2.hygraph.com/v2/clf842ld96zae01td5ube6sxu/master',
+    cache: new InMemoryCache()
+  });
+
+  const data = await client.query({
+    query: gql`
+    query MyQuery {
+      page(where: {slug: "home"}) {
+        id
+        heroLink
+        heroText
+        heroTitle
+        name
+        slug
+        heroBackground {
+          height
+          width
+          url
+        }
+      }
+      products(first: 4){
+        name
+        price
+        slug
+        image {
+          height
+          url
+          width
+        }
+      }
+    }
+    `
+  })
+
+  const home = data.data.page;
+  const products = data.data.products;
+
+  return {
+    props: {
+      home,
+      products
+    } 
+  }
 }
