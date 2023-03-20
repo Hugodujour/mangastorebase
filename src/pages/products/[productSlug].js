@@ -40,9 +40,9 @@ export default function Product({ product }) {
             </p>
             <p className={styles.productBuy}>
             <Button className="snipcart-add-item fill"
-      data-item-id={product.id}
+      data-item-id="cosmo-mousepad"
       data-item-price={product.price}
-      data-item-url={`localhost:3000/products/${product.name}`}
+      data-item-url={`/products/${product.name}`}
       data-item-image={product.image.url}
       data-item-description={product.description?.text}
       data-item-name={product.name}>
