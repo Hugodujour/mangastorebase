@@ -22,7 +22,7 @@ export default function Category({ category, products }) {
       </Head>
 
       <Container>
-        <h1>{ category.name }</h1>
+        <h1>Figurines</h1>
 
         
 
