@@ -10,14 +10,10 @@ import Layout from '@components/Layout';
 import Header from '@components/Header';
 import Container from '@components/Container';
 import Button from '@components/Button';
-import Image from 'next/image';
 
 import styles from '@styles/Product.module.scss'
 
-
-
 export default function Product({ product }) {
-  console.log(product.image.url)
   return (
     <Layout>
       <Head>
@@ -53,30 +49,31 @@ export default function Product({ product }) {
         </div>
       </Container>
     </Layout>
-    
   )
 }
 export async function getStaticProps({ params }) {
   const client = new ApolloClient({
-    uri: 'https://api-us-east-1.graphcms.com/v2/ckzvrda212z1d01za7m8y55rc/master',
+    uri: 'https://api-eu-west-2.hygraph.com/v2/clfccf2653egz01ue0esw2vd3/master',
     cache: new InMemoryCache()
   });
 
   const data = await client.query({
     query: gql`
-      query PageProduct($slug: String) {
-        product(where: {slug: $slug}) {
-          id
-          image
-          name
-          price
-          description {
-            html
-          }
-          slug
+    query Products($slug: String) {
+      product(where: {slug: $slug}) {
+        id
+        name
+        price
+        description {
+          html
+        }
+        image {
+          url
+          width
+          height
         }
       }
-    `,
+    }`,
     variables: {
       slug: params.productSlug
     }
@@ -93,22 +90,27 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const client = new ApolloClient({
-    uri: 'https://api-us-east-1.graphcms.com/v2/ckzvrda212z1d01za7m8y55rc/master', //
+    uri: 'https://api-eu-west-2.hygraph.com/v2/clfccf2653egz01ue0esw2vd3/master', //
     cache: new InMemoryCache()
   });
 
   const data = await client.query({
     query: gql`
-      query PageProducts {
-        products {
-          name
-          price
-          slug
-          image
+    query Products {
+      products {
+        name
+        price
+        slug
+        image {
+          url
+          width
+          height
         }
       }
-    `
+    }`
   });
+
+    
 
   const paths = data.data.products.map(product => {
     return {
@@ -123,4 +125,3 @@ export async function getStaticPaths() {
     fallback: false
   }
 }
-

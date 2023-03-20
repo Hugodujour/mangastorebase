@@ -1,6 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import Link from 'next/link';
-import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
+import {
+  ApolloClient,
+  InMemoryCache,
+  gql
+} from "@apollo/client";
 
 import Image from 'next/image';
 import Layout from '@components/Layout';
@@ -11,11 +16,8 @@ import Button from '@components/Button';
 
 import styles from '@styles/Page.module.scss'
 
-export default function Home({ home, products }) {
-  
-  const { heroTitle, heroText, heroLink, heroBackground } = home
-  console.log('products', products)
-  console.log('home', home)
+
+export default function Home({ products })  {
   return (
     <Layout>
       <Head>
@@ -27,7 +29,7 @@ export default function Home({ home, products }) {
         <h1 className="sr-only">Manga Store</h1>
 
         <div className={styles.hero}>
-          <Link href={ heroLink }>
+          <Link href="/">
             <a>
               <div className={styles.heroContent}>
                 <h2>Collectionner n&apos;est pas un crime.</h2>
@@ -41,13 +43,13 @@ export default function Home({ home, products }) {
         <h2 className={styles.heading}>Derniers articles</h2>
 
         <ul className={styles.products}>
-          {products?.map(product => {
+          {products.map(product => {
             return (
               <li key={product.slug}>
                 <Link href={`/products/${product.slug}`}>
                   <a>
                     <div className={styles.productImage}>
-                      <img width="500" height="500" src={product.image.url} alt="" />
+                      <img width={product.image.width} height={product.image.height} src={product.image.url} alt="" />
                     </div>
                     <h3 className={styles.productTitle}>
                       { product.name }
@@ -77,40 +79,27 @@ export default function Home({ home, products }) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
   const client = new ApolloClient({
-    uri: 'https://api-eu-west-2.hygraph.com/v2/clf842ld96zae01td5ube6sxu/master',
-    cache: new InMemoryCache()
+    uri: 'https://api-eu-west-2.hygraph.com/v2/clfccf2653egz01ue0esw2vd3/master',
+    cache: new InMemoryCache(),
   });
 
   const data = await client.query({
     query: gql`
-    query MyQuery {
-      page(where: {slug: "home"}) {
+    query Products {
+      products (last: 4) {
+        createdAt
         id
-        heroLink
-        heroText
-        heroTitle
         name
-        slug
-        heroBackground {
-          height
-          width
-          url
-        }
-      }
-      products(first: 4){
-        name
-        id
         price
+        publishedAt
         slug
-        description {
-          text
-        }
+        updatedAt
         image {
-          height
           url
           width
+          height
         }
       }
     }
@@ -122,8 +111,7 @@ export async function getStaticProps(context) {
 
   return {
     props: {
-      home,
       products
-    } 
+    }
   }
 }
