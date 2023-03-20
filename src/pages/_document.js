@@ -13,7 +13,7 @@ export default function Document() {
         <Main />
         <NextScript />
         
-        <div hidden id="snipcart" data-api-key="YjkwMDI4MzUtNDE3ZS00MTRkLThhYjYtNmNiNTM4ODIzNmNlNjM4MTQzMDkwMzE2MTUyNzQ5"></div>
+        <div hidden id="snipcart" data-api-key="YjkwMDI4MzUtNDE3ZS00MTRkLThhYjYtNmNiNTM4ODIzNmNlNjM4MTQzMDkwMzE2MTUyNzQ5" data-config-modal-style="side"></div>
       </body>
     </Html>
   )

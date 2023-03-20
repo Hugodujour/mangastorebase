@@ -58,9 +58,15 @@ export default function Home({ home, products }) {
                   </a>
                 </Link>
                 <p>
-                  <Button className="fill">
-                    Ajouter au panier
-                  </Button>
+                <Button className="snipcart-add-item fill"
+      data-item-id={product.id}
+      data-item-price={product.price}
+      data-item-url={`localhost:3000/products/${product.name}`}
+      data-item-image={product.image.url}
+      data-item-description={product.description?.text}
+      data-item-name={product.name}>
+                Ajouter au panier
+              </Button>
                 </p>
               </li>
             )
@@ -95,8 +101,12 @@ export async function getStaticProps(context) {
       }
       products(first: 4){
         name
+        id
         price
         slug
+        description {
+          text
+        }
         image {
           height
           url
