@@ -10,10 +10,14 @@ import Layout from '@components/Layout';
 import Header from '@components/Header';
 import Container from '@components/Container';
 import Button from '@components/Button';
+import Image from 'next/image';
 
 import styles from '@styles/Product.module.scss'
 
+
+
 export default function Product({ product }) {
+  console.log(product.image.url)
   return (
     <Layout>
       <Head>
@@ -35,14 +39,15 @@ export default function Product({ product }) {
               ${ product.price }
             </p>
             <p className={styles.productBuy}>
-              <Button>
-                Add to Cart
+              <Button className="fill">
+                Ajouter au panier
               </Button>
             </p>
           </div>
         </div>
       </Container>
     </Layout>
+    
   )
 }
 export async function getStaticProps({ params }) {
@@ -112,3 +117,4 @@ export async function getStaticPaths() {
     fallback: false
   }
 }
+

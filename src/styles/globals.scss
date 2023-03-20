@@ -26,6 +26,14 @@ img {
   height: auto;
 }
 
+.heroImage {
+  border: solid 2px black;
+}
+
+.fill {
+  width: 100%
+}
+
 .sr-only {
   position: absolute;
   left: -10000px;
