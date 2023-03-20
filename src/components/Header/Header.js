@@ -17,17 +17,17 @@ const Header = () => {
         </p>
         <ul className={styles.headerLinks}>
           <li>
-            <Link href="/about/about">
+          <Link href="/about/about">
               <a>À Propos</a>
             </Link>
           </li>
-          <li>
-            <Link href="/products/mangas">
+            <li>
+            <Link href="/categories/manga">
               <a>Mangas</a>
             </Link>
           </li>
           <li>
-            <Link href="/products/figurines">
+          <Link href="/categories/figurine">
               <a>Figurines</a>
             </Link>
           </li>
