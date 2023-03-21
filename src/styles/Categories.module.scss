@@ -1,0 +1,83 @@
+@import "@styles/settings/__settings";
+
+.fullHeight {
+  height: 100%;
+}
+
+.border {
+  border: solid 2px black;
+}
+
+.directory {
+    height: 100%;
+
+    
+    .wrap {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+  
+      .item {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        float: left;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: solid 2px black;
+  
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0; left: 0;
+          background-color: rgba(0,0,0,0.3);
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+  
+        a {
+          position: absolute;
+          top: 50%; left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -moz-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          border: solid 2px black;
+          font-size: 1em;
+          color: white;
+          background-color: $color-button-background;
+          font-weight: $font-weight-black;
+          font-family: inherit;
+          text-transform: uppercase;
+          padding: .6em 1em;
+          border-radius: 0;
+          cursor: pointer;
+          
+          &:hover {
+            background: rgba(255,255,255,1);
+            color: black;
+          }
+  
+        }
+  
+      }
+    }
+  
+  }
+  
+  @media only screen and (max-width: 980px) {
+  
+    .directory .wrap .item {
+      width: 100%;
+      height: 50%;
+  
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  
+  }
+
+  

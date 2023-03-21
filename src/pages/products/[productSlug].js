@@ -36,9 +36,9 @@ export default function Product({ product }) {
             </p>
             <p className={styles.productBuy}>
             <Button className="snipcart-add-item fill"
-      data-item-id="cosmo-mousepad"
+      data-item-id={product.slug}
       data-item-price={product.price}
-      data-item-url={`/products/${product.name}`}
+      data-item-url={`/products/${product.slug}`}
       data-item-image={product.image.url}
       data-item-description={product.description?.text}
       data-item-name={product.name}>
@@ -63,6 +63,7 @@ export async function getStaticProps({ params }) {
       product(where: {slug: $slug}) {
         id
         name
+        slug
         price
         description {
           html

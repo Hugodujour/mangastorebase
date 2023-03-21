@@ -2,12 +2,14 @@
   {
     "id": "vegeta",
     "name": "Vegeta",
-    "price": 90,
+    "url": "https://56c3-2a01-cb19-632-a300-75e3-d605-1089-893e.eu.ngrok.io/products/vegeta",
+    "price": 90.00,
     "image": "/images/vegeta.jpg"
   },
   {
     "id": "goku-ultra-instinct",
     "name": "Goku Ultra Instinct",
+    "url": "https://56c3-2a01-cb19-632-a300-75e3-d605-1089-893e.eu.ngrok.io/products/goku-ultra-instinct",
     "price": 400,
     "image": "/images/goku-ultra-instinct2.jpg"
   }

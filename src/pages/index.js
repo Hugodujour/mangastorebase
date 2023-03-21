@@ -60,15 +60,22 @@ export default function Home({ products })  {
                   </a>
                 </Link>
                 <p>
+                <button class="snipcart-add-item"
+  data-item-id="/"
+  data-item-name="Ngrok demo"
+  data-item-price="20.00"
+  data-item-url={products.json}>Buy now</button>
+                
                 <Button className="snipcart-add-item fill"
       data-item-id={product.id}
-      data-item-price={product.price}
-      data-item-url={`localhost:3000/products/${product.name}`}
+      data-item-price={product.price.toFixed(2)}
+      data-item-url="/"
       data-item-image={product.image.url}
       data-item-description={product.description?.text}
       data-item-name={product.name}>
                 Ajouter au panier
               </Button>
+            
                 </p>
               </li>
             )

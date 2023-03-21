@@ -1,5 +1,5 @@
 {
-  "name": "demo-space-jelly-gear",
+  "name": "manga-store",
   "private": true,
   "scripts": {
     "dev": "next dev",

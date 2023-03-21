@@ -21,21 +21,18 @@ const Header = () => {
               <a>À Propos</a>
             </Link>
           </li>
-            <li>
-            <Link href="/categories/manga">
-              <a>Mangas</a>
-            </Link>
-          </li>
           <li>
-          <Link href="/categories/figurine">
-              <a>Figurines</a>
+            <Link href="/test/test">
+              <a>Catégories</a>
             </Link>
           </li>
+            
+            
         </ul>
         <p className={styles.headerCart}>
-        <button class="snipcart-checkout">
+        <button className="snipcart-checkout">
             <FaShoppingCart />
-            <span class="snipcart-total-price"></span>
+            <span className="snipcart-total-price">$0.00</span>
           </button>
         </p>
       </Container>
