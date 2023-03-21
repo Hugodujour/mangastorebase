@@ -29,15 +29,13 @@ export default function Home({ products })  {
         <h1 className="sr-only">Manga Store</h1>
 
         <div className={styles.hero}>
-          <Link href="/">
-            <a>
               <div className={styles.heroContent}>
                 <h2>Collectionner n&apos;est pas un crime.</h2>
                 <p>Le meilleur du manga !</p>
               </div>
-              <Image className={styles.heroImage} src="/images/space-jelly-gear-banner.jpg" alt="" width={1200} height={400} />
-            </a>
-          </Link>
+              <div className={styles.test}>
+              <Image src="/images/manga-banner.jpg" alt="Image of Hero Banner" width={1200} height={400} />
+              </div>
         </div>
 
         <h2 className={styles.heading}>Derniers articles</h2>
@@ -48,8 +46,8 @@ export default function Home({ products })  {
               <li key={product.slug}>
                 <Link href={`/products/${product.slug}`}>
                   <a>
-                    <div className={styles.productImage}>
-                      <img width={product.image.width} height={product.image.height} src={product.image.url} alt="" />
+                    <div className={styles.productImage} >
+                      <img width={product.image.width} height={product.image.height} src={product.image.url} alt={`Picture of ${product.name}`} />
                     </div>
                     <h3 className={styles.productTitle}>
                       { product.name }
@@ -60,11 +58,7 @@ export default function Home({ products })  {
                   </a>
                 </Link>
                 <p>
-                <button class="snipcart-add-item"
-  data-item-id="/"
-  data-item-name="Ngrok demo"
-  data-item-price="20.00"
-  data-item-url={products.json}>Buy now</button>
+                
                 
                 <Button className="snipcart-add-item fill"
       data-item-id={product.id}
