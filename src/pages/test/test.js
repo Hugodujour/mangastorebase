@@ -22,7 +22,7 @@ export default function Category() {
                 <div
                 className={styles.item}
                 style={{
-                    backgroundImage: `url("https://www.themoviedb.org/t/p/original/iBAtBLqCMON3NPIjyQ1wdMbpTAk.jpg")`
+                    backgroundImage: `url("https://i.pinimg.com/originals/da/05/11/da051195f24e7b285cf0cf1055abd3f4.jpg")`
                     }}>
                         <Link href="/categories/mangas">
               <a>Mangas</a>

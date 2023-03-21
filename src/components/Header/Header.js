@@ -32,7 +32,7 @@ const Header = () => {
         <p className={styles.headerCart}>
         <button className="snipcart-checkout">
             <FaShoppingCart />
-            <span className="snipcart-total-price">$0.00</span>
+            <span className="snipcart-total-price">0.00 $US</span>
           </button>
         </p>
       </Container>
