@@ -26,6 +26,11 @@ const Header = () => {
               <a>Catégories</a>
             </Link>
           </li>
+          <li>
+            <Link href="/signin">
+              <a>Private</a>
+            </Link>
+          </li>
             
             
         </ul>
