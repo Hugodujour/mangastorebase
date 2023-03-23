@@ -27,7 +27,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/signin">
+            <Link href="/private">
               <a>Private</a>
             </Link>
           </li>
