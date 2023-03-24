@@ -26,13 +26,17 @@ const Header = () => {
               <a>Catégories</a>
             </Link>
           </li>
-            
+          <li>
+            <Link href="/private">
+              <a>Private</a>
+            </Link>
+          </li>
             
         </ul>
         <p className={styles.headerCart}>
         <button className="snipcart-checkout">
             <FaShoppingCart />
-            <span className="snipcart-total-price">0.00 $US</span>
+            <span className="snipcart-total-price"> €</span>
           </button>
         </p>
       </Container>

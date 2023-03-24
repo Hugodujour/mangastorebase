@@ -53,7 +53,7 @@ export default function Home({ products })  {
                       { product.name }
                     </h3>
                     <p className={styles.productPrice}>
-                      ${ product.price }
+                      { product.price }€
                     </p>
                   </a>
                 </Link>
@@ -61,12 +61,12 @@ export default function Home({ products })  {
                 
                 
                 <Button className="snipcart-add-item fill"
-      data-item-id={product.id}
-      data-item-price={product.price.toFixed(2)}
-      data-item-url="/"
-      data-item-image={product.image.url}
-      data-item-description={product.description?.text}
-      data-item-name={product.name}>
+                  data-item-id={product.id}
+                  data-item-price={product.price.toFixed(2)}
+                  data-item-url={`/products/${product.slug}`}
+                  data-item-image={product.image.url}
+                  data-item-description={product.description?.text}
+                  data-item-name={product.name}>
                 Ajouter au panier
               </Button>
             
@@ -80,6 +80,7 @@ export default function Home({ products })  {
   )
 }
 
+ 
 export async function getStaticProps() {
   const client = new ApolloClient({
     uri: 'https://api-eu-west-2.hygraph.com/v2/clfccf2653egz01ue0esw2vd3/master',
@@ -89,7 +90,7 @@ export async function getStaticProps() {
   const data = await client.query({
     query: gql`
     query Products {
-      products (last: 4) {
+      products (orderBy: publishedAt_ASC, last: 4) {
         createdAt
         id
         name
