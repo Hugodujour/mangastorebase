@@ -42,8 +42,8 @@ export default function Category({ category, products }) {
               <li key={product.id}>
                 <Link href={`/products/${product.slug}`}>
                   <a>
-                    <div className={styles.productImage}>
-                      <img width={product.image.width} height={product.image.height} src={product.image.url} alt={`Picture of ${product.name}`}/>
+                    <div className={`${styles.productImage} ${styles.bordered}`}>
+                      <Image width={product.image.width} height={product.image.height} src={product.image.url} alt={`Picture of ${product.name}`} placeholder="blur" blurDataURL={product.image.url}/>
                     </div>
                     <h3 className={styles.productTitle}>
                       { product.name }

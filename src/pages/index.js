@@ -46,8 +46,8 @@ export default function Home({ products })  {
               <li key={product.slug}>
                 <Link href={`/products/${product.slug}`}>
                   <a>
-                    <div className={styles.productImage} >
-                      <img width={product.image.width} height={product.image.height} src={product.image.url} alt={`Picture of ${product.name}`} />
+                    <div className={`${styles.productImage} ${styles.bordered}`} >
+                      <Image width={product.image.width} height={product.image.height} src={product.image.url} alt={`Picture of ${product.name}`} placeholder="blur" blurDataURL={product.image.url} className={styles.bordered}  />
                     </div>
                     <h3 className={styles.productTitle}>
                       { product.name }
@@ -117,3 +117,4 @@ export async function getStaticProps() {
     }
   }
 }
+

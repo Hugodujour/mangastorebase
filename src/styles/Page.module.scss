@@ -10,6 +10,21 @@
   }
 }
 
+.img {
+  border: solid 2px black;
+}
+
+.bordered {
+  transition: 0.7s ease;
+
+  &:hover {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    transition: 0.2s ease;
+  }
+}
+
+
 
 .hero {
   position: relative;
@@ -37,6 +52,7 @@
 }
 
 .heroContent {
+  
 
   display: flex;
   flex-direction: column;
