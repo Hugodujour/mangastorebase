@@ -34,4 +34,4 @@ yarn-error.log*
 .vercel
 
 #apifirebase
-/src/config.js
+#/src/config.js
