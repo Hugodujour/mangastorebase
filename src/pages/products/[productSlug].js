@@ -9,6 +9,7 @@ import Layout from '@components/Layout';
 import Header from '@components/Header';
 import Container from '@components/Container';
 import Button from '@components/Button';
+import Image from 'next/image';
 
 import styles from '@styles/Product.module.scss'
 
@@ -26,7 +27,7 @@ export default function Product({ product }) {
       <Container>
         <div className={styles.productWrapper}>
           <div className={styles.productImage}>
-            <img width={product.image.width} height={product.image.height} src={product.image.url} alt={`Picture of ${product.name}`} />
+            <Image width={product.image.width} height={product.image.height} src={product.image.url} alt={`Picture of ${product.name}`} />
           </div>
           <div className={styles.productContent}>
             <h1>{ product.name }</h1>
@@ -34,7 +35,7 @@ export default function Product({ product }) {
               __html: product.description?.html
             }} />
             <p className={styles.productPrice}>
-              { product.price }€
+              { product.price } $US
             </p>
             <p className={styles.productBuy}>
               <Button className="snipcart-add-item fill"

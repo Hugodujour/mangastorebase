@@ -10,17 +10,17 @@
   }
 }
 
-.img {
-  border: solid 2px black;
-}
+
 
 .bordered {
-  transition: 0.7s ease;
+  border: solid 2px black;
+  box-shadow: 10px 10px black;
+  transition: 0.2s ease;
 
   &:hover {
-    -webkit-transform: scale(0.95);
     transform: scale(0.95);
     transition: 0.2s ease;
+    box-shadow: 15px 15px black;
   }
 }
 
@@ -138,10 +138,11 @@
   margin: .4em 0 0;
 }
 
-.productImage {
+.productImage img {
 
   & > div {
     display: block!important;
+    
   }
 
 }

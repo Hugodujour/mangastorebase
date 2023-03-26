@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head'
 import Link from 'next/link';
 import {
@@ -47,13 +46,13 @@ export default function Home({ products })  {
                 <Link href={`/products/${product.slug}`}>
                   <a>
                     <div className={`${styles.productImage} ${styles.bordered}`} >
-                      <Image width={product.image.width} height={product.image.height} src={product.image.url} alt={`Picture of ${product.name}`} placeholder="blur" blurDataURL={product.image.url} className={styles.bordered}  />
+                      <Image width={product.image.width} height={product.image.height} src={product.image.url} alt={`Picture of ${product.name}`} placeholder="blur" blurDataURL={product.image.url} />
                     </div>
                     <h3 className={styles.productTitle}>
                       { product.name }
                     </h3>
                     <p className={styles.productPrice}>
-                      { product.price }€
+                      { product.price } $US
                     </p>
                   </a>
                 </Link>
@@ -90,7 +89,7 @@ export async function getStaticProps() {
   const data = await client.query({
     query: gql`
     query Products {
-      products (orderBy: publishedAt_ASC, last: 4) {
+      products (orderBy: updatedAt_ASC, last: 4) {
         createdAt
         id
         name
